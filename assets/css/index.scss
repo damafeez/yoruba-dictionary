@@ -1,0 +1,147 @@
+@import './reset';
+@import './animations';
+
+:root {
+  --black-2: #47474a;
+  --off-white: #e5e5e5;
+  --off-white-2: rgba(9, 95, 223, 0.03);
+  --gray: #f5f6f7;
+  --gray-2: #94989b;
+  --blue: #2374ed;
+  --blue-2: #307cef;
+}
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  @screen sm {
+    font-size: initial;
+  }
+}
+// text
+h1 {
+  font-size: 3.125rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.875rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 0.8rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+a {
+  display: inline-block;
+  color: currentColor;
+  text-decoration: none;
+  text-underline-position: under;
+  &:not(.no-hover):hover {
+    text-decoration: underline;
+  }
+}
+.caption {
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.29em;
+}
+
+section,
+header {
+  min-height: min(50rem, 100vh);
+}
+section,
+header,
+nav,
+footer,
+.container {
+  transition: background 0.3s ease-in-out, color 0.2s ease-in-out;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  @screen sm {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+.pad-y {
+  @apply py-24;
+}
+.neg-margin {
+  margin-left: -1.3rem;
+  margin-right: -1.3rem;
+  @screen sm {
+    margin-left: -10%;
+    margin-right: -10%;
+  }
+}
+img {
+  max-width: 100%;
+}
+[watermark] {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: attr(watermark);
+    font-size: 3em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.03;
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.line-beside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &::before,
+  &::after {
+    content: '';
+    flex: 0.45;
+    border-top: 1px solid var(--gray);
+  }
+}
+
+label {
+  cursor: pointer;
+}
+
+svg.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+// utilities
+.jump-hover {
+  transition: all 0.2s ease-in;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @include jump-hover;
+    }
+  }
+}

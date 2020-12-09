@@ -1,0 +1,5 @@
+@mixin jump-hover {
+  @apply shadow-xl;
+  opacity: 0.9;
+  transform: translateY(-3px);
+}

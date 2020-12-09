@@ -1,0 +1,51 @@
+@keyframes hover {
+  100% {
+    transform: translate(-10%, -10%) rotate(0deg);
+  }
+  95% {
+    transform: translate(-30%, -17%) rotate(50deg);
+  }
+  50% {
+    transform: translate(-20%, -50%) rotate(40deg);
+  }
+  0% {
+    transform: translate(-10%, -10%) rotate(0deg);
+  }
+}
+
+// vue transitions
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slow-show-enter-active {
+  transition: opacity 0.3s ease 0.3s !important;
+}
+.slow-show-enter,
+.slow-show-leave-to {
+  opacity: 0.3;
+  width: 10%;
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) !important;
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(30px, 0);
+}
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-30px, 0);
+}
