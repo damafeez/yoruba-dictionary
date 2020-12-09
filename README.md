@@ -1,5 +1,7 @@
 # yoruba-dictionary
 
+### A dictionary of NIgerian languages
+
 ## Build Setup
 
 ```bash
