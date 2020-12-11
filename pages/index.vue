@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="container bg-off-white-1 text-black-2 pt-10 pb-24">
+    <div class="container bg-off-white-1 text-black-2 py-20">
       <h5 class="font-medium flex items-center">
         <svg
           width="30"
@@ -61,7 +61,7 @@
       <div class="flex items-center gap-x-6">
         <SearchBar placeholder="Search for any word" class="flex-1" />
         <span
-          class="w-12 h-12 rounded-full bg-off-white-3 flex justify-center items-center text-lg text-blue-2 cursor-pointer"
+          class="w-12 h-12 rounded-full bg-off-white-3 flex justify-center items-center text-lg text-blue-2 cursor-pointer hover:bg-blue-2 hover:text-white transition-colors"
           ><svg
             class="icon"
             viewBox="0 0 20 20"
@@ -81,6 +81,19 @@
           </svg>
         </span>
       </div>
+      <div
+        alhpabet="a"
+        class="word-cards grid lg:grid-cols-2 xl:grid-cols-3 gap-10"
+      >
+        <WordCard />
+        <WordCard />
+        <WordCard />
+        <WordCard />
+        <WordCard />
+        <WordCard />
+        <WordCard />
+        <WordCard />
+      </div>
     </section>
     <footer class="bg-blue h-64"></footer>
   </div>
@@ -88,10 +101,12 @@
 <script>
 import AlphabetPill from '~/components/AlphabetPill'
 import SearchBar from '~/components/SearchBar'
+import WordCard from '~/components/WordCard'
 export default {
   components: {
     AlphabetPill,
     SearchBar,
+    WordCard,
   },
   alphabets: [
     'a',
@@ -123,3 +138,20 @@ export default {
   ],
 }
 </script>
+<style lang="scss" scoped>
+.word-cards {
+  &::before {
+    content: attr(alhpabet);
+    transform: translateY(1.5rem);
+    @screen sm {
+      position: sticky;
+      transform: translate(-3rem, 4.4rem);
+    }
+    grid-column: 1/-1;
+    top: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+</style>
