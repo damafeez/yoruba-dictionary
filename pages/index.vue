@@ -48,7 +48,9 @@
           Dictionary</span
         >
       </h5>
-      <div class="flex flex-wrap gap-x-4 gap-y-6 max-w-3xl mt-12">
+      <div
+        class="alphabet-grid grid justify-items-center gap-x-3 gap-y-6 max-w-2xl mt-12"
+      >
         <AlphabetPill
           v-for="alphabet in $options.alphabets"
           :key="alphabet"
@@ -139,8 +141,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.word-cards {
-  &::before {
+.home {
+  .alphabet-grid {
+    grid-template-columns: repeat(auto-fill, minmax(2.5rem, 1fr));
+  }
+  .word-cards::before {
     content: attr(alhpabet);
     transform: translateY(1.5rem);
     @screen sm {
