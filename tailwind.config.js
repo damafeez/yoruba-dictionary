@@ -7,6 +7,7 @@ module.exports = {
         'off-white': 'var(--off-white)',
         'off-white-1': 'var(--off-white-1)',
         'off-white-2': 'var(--off-white-2)',
+        'off-white-3': 'var(--off-white-3)',
         gray: 'var(--gray)',
         'gray-2': 'var(--gray-2)',
         blue: 'var(--blue)',
