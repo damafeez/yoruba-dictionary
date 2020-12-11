@@ -4,7 +4,9 @@
 :root {
   --black-2: #47474a;
   --off-white: #e5e5e5;
+  --off-white-1: #fafbfc;
   --off-white-2: rgba(9, 95, 223, 0.03);
+  --off-white-3: rgba(48, 124, 239, 0.07);
   --gray: #f5f6f7;
   --gray-2: #94989b;
   --blue: #2374ed;
@@ -42,10 +44,12 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
-  margin-top: 1em;
+h6 {
+  margin-top: 0;
   margin-bottom: 1em;
+}
+p {
+  margin: 0;
 }
 a {
   display: inline-block;
@@ -75,12 +79,12 @@ footer,
   padding-left: 1.3rem;
   padding-right: 1.3rem;
   @screen sm {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 7%;
+    padding-right: 7%;
   }
 }
 .pad-y {
-  @apply py-24;
+  @apply py-16;
 }
 .neg-margin {
   margin-left: -1.3rem;

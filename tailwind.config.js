@@ -5,7 +5,9 @@ module.exports = {
         current: 'currentColor',
         'black-2': 'var(--black-2)',
         'off-white': 'var(--off-white)',
+        'off-white-1': 'var(--off-white-1)',
         'off-white-2': 'var(--off-white-2)',
+        'off-white-3': 'var(--off-white-3)',
         gray: 'var(--gray)',
         'gray-2': 'var(--gray-2)',
         blue: 'var(--blue)',
@@ -21,6 +23,7 @@ module.exports = {
       },
       // we can change these later
       boxShadow: {
+        xs: '0px 1px 4px rgba(0, 0, 0, 0.1)',
         sm: '0px 0px 30px rgba(0, 0, 0, 0.01)',
         md: '5px 5px 40px rgba(0, 0, 0, 0.05)',
         lg:
