@@ -3,8 +3,8 @@
     <AlphabetPicker />
     <section class="py-12">
       <SearchBar placeholder="Search for any word" />
-      <div class="flex flex-wrap py-5 gap-5">
-        <div class="text-sm flex-1">
+      <div class="flex flex-wrap py-5 mt-5 gap-6">
+        <main class="text-sm">
           <div class="bg-off-white-2 pt-5 pb-8 px-6 rounded-sm">
             <h4 class="text-blue">Oro</h4>
             <p>
@@ -29,7 +29,7 @@
               nostrum sunt nesciunt, quidem tenetur.
             </p>
           </div>
-        </div>
+        </main>
         <aside class="bg-off-white-2"></aside>
       </div>
     </section>
@@ -45,7 +45,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+main {
+  flex: 1 1 30rem;
+}
 aside {
-  width: min(20rem, 40%);
+  flex: 0.2 2 min(20rem, 30%);
 }
 </style>

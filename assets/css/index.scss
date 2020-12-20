@@ -51,7 +51,7 @@ h6 {
 }
 p {
   margin: 0;
-  p ~ & {
+  p + & {
     margin-top: 1em;
   }
 }

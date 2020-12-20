@@ -4,7 +4,7 @@
       <template v-slot:icon>
         <svg
           slot="icon"
-          class="icon text-xl text-gray-2"
+          class="icon text-xl"
           viewBox="0 0 30 30"
           xmlns="http://www.w3.org/2000/svg"
         >
